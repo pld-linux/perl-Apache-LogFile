@@ -5,13 +5,13 @@ Summary:	Apache::LogFile - interface to Apache's logging routines
 Summary(pl):	Apache::LogFile - interfejs do procedur loguj±cych Apache'a
 Name:		perl-Apache-LogFile
 Version:	0.12
-Release:	5
+Release:	6
 License:	Apache Group
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	11d254d35003131fd1051ba14ee3107a
-BuildRequires:	apache-mod_perl
-BuildRequires:	apache-devel
+BuildRequires:	apache1-mod_perl
+BuildRequires:	apache1-devel
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 3.0.3-26
 Requires:	apache-mod_perl
