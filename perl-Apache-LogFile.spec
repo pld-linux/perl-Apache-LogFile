@@ -34,13 +34,16 @@ programu mo¿e byæ wzglêdna w stosunku do ServerRoot.
 %setup -q -n %{pdir}-%{pnam}-%{version}
 
 %build
-%{__perl} Makefile.PL
-%{__make} OPTIMIZE="%{rpmcflags}"
+%{__perl} Makefile.PL \
+	INSTALLDIRS=vendor
+%{__make} \
+	OPTIMIZE="%{rpmcflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} install DESTDIR=$RPM_BUILD_ROOT
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 mv $RPM_BUILD_ROOT%{perl_sitearch}/Apache/*.pl $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
@@ -50,13 +53,13 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%{perl_sitearch}/%{pdir}/*.pm
-%{perl_sitearch}/%{pdir}/%{pnam}
-%dir %{perl_sitearch}/auto/Apache/LogFile
-%attr(755,root,root) %{perl_sitearch}/auto/Apache/LogFile/*.so
-%{perl_sitearch}/auto/Apache/LogFile/*.bs
-%dir %{perl_sitearch}/auto/Apache/LogFile/Config
-%attr(755,root,root) %{perl_sitearch}/auto/Apache/LogFile/Config/*.so
-%{perl_sitearch}/auto/Apache/LogFile/Config/*.bs
+%{perl_vendorarch}/%{pdir}/*.pm
+%{perl_vendorarch}/%{pdir}/%{pnam}
+%dir %{perl_vendorarch}/auto/Apache/LogFile
+%attr(755,root,root) %{perl_vendorarch}/auto/Apache/LogFile/*.so
+%{perl_vendorarch}/auto/Apache/LogFile/*.bs
+%dir %{perl_vendorarch}/auto/Apache/LogFile/Config
+%attr(755,root,root) %{perl_vendorarch}/auto/Apache/LogFile/Config/*.so
+%{perl_vendorarch}/auto/Apache/LogFile/Config/*.bs
 %attr(755,root,root) %{_examplesdir}/%{name}-%{version}
 %{_mandir}/man3/*
