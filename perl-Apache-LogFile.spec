@@ -1,6 +1,6 @@
 %include	/usr/lib/rpm/macros.perl
-%define	pdir	Apache
-%define	pnam	LogFile
+%define		pdir	Apache
+%define		pnam	LogFile
 Summary:	Apache::LogFile - interface to Apache's logging routines
 Summary(pl):	Apache::LogFile - interfejs do procedur loguj±cych Apache'a
 Name:		perl-Apache-LogFile
