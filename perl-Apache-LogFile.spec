@@ -5,7 +5,7 @@ Summary:	Apache::LogFile - Interface to Apache's logging routines
 Summary(pl):	Apache::LogFile - Interfejs do procedur loguj±cych Apache
 Name:		perl-Apache-LogFile
 Version:	0.12
-Release:	1
+Release:	2
 License:	Apache Group
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
@@ -15,13 +15,17 @@ Requires:	apache-mod_perl
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-The PerlLogFile directive can be used to hook a Perl filehandle to a piped
-logger or to a file open for appending.  If the first character of the
-filename is a |, the file handle is opened as a pipe to the given program.
-The file or program can be relative to the ServerRoot.
+The PerlLogFile directive can be used to hook a Perl filehandle to a
+piped logger or to a file open for appending. If the first character
+of the filename is a |, the file handle is opened as a pipe to the
+given program. The file or program can be relative to the ServerRoot.
 
-# %description -l pl
-# TODO
+%description -l pl
+Dyrektywa PerlLogFile mo¿e byæ u¿ywa do przekierowania perlowego
+uchwytu pliku rurk± do procesu loguj±cego lub do pliku otwartego do
+dopisywania. Je¿eli pierwszym znakiem nazwy pliku jest |, uchwyt jest
+otwierany jako rurka do podanego programu. ¦cie¿ka do pliku lub
+programu mo¿e byæ wzglêdna w stosunku do ServerRoot.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
