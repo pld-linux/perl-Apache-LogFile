@@ -14,7 +14,7 @@ BuildRequires:	apache1-mod_perl
 BuildRequires:	apache1-devel
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 3.0.3-26
-Requires:	apache-mod_perl
+Requires:	apache1-mod_perl
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
