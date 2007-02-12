@@ -2,7 +2,7 @@
 %define		pdir	Apache
 %define		pnam	LogFile
 Summary:	Apache::LogFile - interface to Apache's logging routines
-Summary(pl):	Apache::LogFile - interfejs do procedur loguj±cych Apache'a
+Summary(pl.UTF-8):   Apache::LogFile - interfejs do procedur logujÄ…cych Apache'a
 Name:		perl-Apache-LogFile
 Version:	0.12
 Release:	6
@@ -23,12 +23,12 @@ piped logger or to a file open for appending. If the first character
 of the filename is a |, the file handle is opened as a pipe to the
 given program. The file or program can be relative to the ServerRoot.
 
-%description -l pl
-Dyrektywa PerlLogFile mo¿e byæ u¿ywa do przekierowania perlowego
-uchwytu pliku rurk± do procesu loguj±cego lub do pliku otwartego do
-dopisywania. Je¿eli pierwszym znakiem nazwy pliku jest |, uchwyt jest
-otwierany jako rurka do podanego programu. ¦cie¿ka do pliku lub
-programu mo¿e byæ wzglêdna w stosunku do ServerRoot.
+%description -l pl.UTF-8
+Dyrektywa PerlLogFile moÅ¼e byÄ‡ uÅ¼ywa do przekierowania perlowego
+uchwytu pliku rurkÄ… do procesu logujÄ…cego lub do pliku otwartego do
+dopisywania. JeÅ¼eli pierwszym znakiem nazwy pliku jest |, uchwyt jest
+otwierany jako rurka do podanego programu. ÅšcieÅ¼ka do pliku lub
+programu moÅ¼e byÄ‡ wzglÄ™dna w stosunku do ServerRoot.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
