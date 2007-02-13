@@ -2,7 +2,7 @@
 %define		pdir	Apache
 %define		pnam	LogFile
 Summary:	Apache::LogFile - interface to Apache's logging routines
-Summary(pl.UTF-8):   Apache::LogFile - interfejs do procedur logujących Apache'a
+Summary(pl.UTF-8):	Apache::LogFile - interfejs do procedur logujących Apache'a
 Name:		perl-Apache-LogFile
 Version:	0.12
 Release:	6
