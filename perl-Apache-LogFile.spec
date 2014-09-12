@@ -58,9 +58,7 @@ rm -rf $RPM_BUILD_ROOT
 %{perl_vendorarch}/%{pdir}/%{pnam}
 %dir %{perl_vendorarch}/auto/Apache/LogFile
 %attr(755,root,root) %{perl_vendorarch}/auto/Apache/LogFile/*.so
-%{perl_vendorarch}/auto/Apache/LogFile/*.bs
 %dir %{perl_vendorarch}/auto/Apache/LogFile/Config
 %attr(755,root,root) %{perl_vendorarch}/auto/Apache/LogFile/Config/*.so
-%{perl_vendorarch}/auto/Apache/LogFile/Config/*.bs
 %attr(755,root,root) %{_examplesdir}/%{name}-%{version}
 %{_mandir}/man3/*
