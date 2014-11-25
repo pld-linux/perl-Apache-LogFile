@@ -1,6 +1,6 @@
-%include	/usr/lib/rpm/macros.perl
 %define		pdir	Apache
 %define		pnam	LogFile
+%include	/usr/lib/rpm/macros.perl
 Summary:	Apache::LogFile - interface to Apache's logging routines
 Summary(pl.UTF-8):	Apache::LogFile - interfejs do procedur logujących Apache'a
 Name:		perl-Apache-LogFile
@@ -10,8 +10,9 @@ License:	Apache Group
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	11d254d35003131fd1051ba14ee3107a
-BuildRequires:	apache1-mod_perl
+URL:		http://search.cpan.org/dist/Apache-LogFile/
 BuildRequires:	apache1-devel
+BuildRequires:	apache1-mod_perl
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 3.0.3-26
 Requires:	apache1-mod_perl
